@@ -11,11 +11,12 @@ URL:		http://www.gnu.org/software/guile-gnome/
 BuildRequires:	g-wrap-devel >= 1.9.7
 BuildRequires:	gtksourceview-devel >= 1.8.0
 BuildRequires:	guile-gnome-glib-devel
+BuildRequires:	guile-gnome-gtk
 BuildRequires:	guile-devel >= 5:1.6.4
 BuildRequires:	pkgconfig >= 1:0.9.0
 Requires:	g-wrap >= 1.9.7
 Requires:	guile >= 5:1.6.4
-Requires:	guile-gnome-glib
+Requires:	guile-gnome-gtk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -50,8 +51,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc gtksourceview/{AUTHORS,ChangeLog,NEWS,README}
 %attr(755,root,root) %{_libdir}/guile-gnome-0/libgw-guile-gnome-gtksourceview.so*
-%{_datadir}/guile-gnome-0/gnome/defs/gtksourceview.defs
-%{_datadir}/guile-gnome-0/gnome/defs/gtksourceview-types.defs
+# conflict with guile-gnome-platform
+#%{_datadir}/guile-gnome-0/gnome/defs/gtksourceview.defs
+#%{_datadir}/guile-gnome-0/gnome/defs/gtksourceview-types.defs
 %{_datadir}/guile-gnome-0/gnome/gtksourceview.scm
 %{_datadir}/guile-gnome-0/gnome/gw/gtksourceview.scm
 %{_datadir}/guile-gnome-0/gnome/gw/gtksourceview-spec.scm
