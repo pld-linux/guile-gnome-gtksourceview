@@ -32,8 +32,8 @@ TextBuffer/TextView.
 %setup -q
 
 %build
-%configure
-
+%configure \
+	--disable-Werror
 %{__make}
 
 %install
