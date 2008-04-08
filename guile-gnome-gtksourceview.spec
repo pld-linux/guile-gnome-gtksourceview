@@ -5,7 +5,7 @@ Version:	1.8.0
 Release:	0.1
 License:	GPL v2+
 Group:		Development/Languages/Scheme
-Source0:	http://ftp.gnu.org/pub/gnu/guile-gnome/guile-gnome-gtksourceview/%{name}-%{version}.tar.gz
+Source0:	http://ftp.gnu.org/gnu/guile-gnome/guile-gnome-gtksourceview/%{name}-%{version}.tar.gz
 # Source0-md5:	f49df7fd463873fa736214b41e7e6b27
 URL:		http://www.gnu.org/software/guile-gnome/
 BuildRequires:	g-wrap-devel >= 1.9.7
